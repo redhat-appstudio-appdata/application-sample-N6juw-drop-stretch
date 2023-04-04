@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-java-springboot-basic-rhtap-devfile-multi-c-xbub
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-java-springboot-basic-rhtap-devfile-multi-c-xbub
+    app.kubernetes.io/part-of: application-sample
+  name: devfile-sample-java-springboot-basic-rhtap-devfile-multi-c-xbub
+  namespace: default
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: devfile-sample-java-springboot-basic-rhtap-devfile-multi-c-xbub
+    weight: null
+status: {}
